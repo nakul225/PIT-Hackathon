@@ -1,0 +1,27 @@
+<!--{% extends "layout.html" %}
+<div class=twitbox>
+<h3> Do you want to report about an incident {{ g.user.username }}?</h3>
+<form action="{{ url_for('add_message') }}" method=post>
+  <p><input type=text name=text size=60><!--
+  --><!--<input type=submit value="Share">
+  <p><h3>Where did it happen?</h3><input type=text name=where size=50>
+  <p><input type="checkbox" name="publicFlag" value="publicFlag">Don't post it in public<br>
+  <p><input type="checkbox" name="intentionalFlag" value="intentionalFlag">Did he/she mean to offend you?<br>
+  <p><input type="checkbox" name="reportToOffenderFlag" value="reportToOffenderFlag">Do you want to let him/her know?<br>
+</form>
+</div>-->
+{% extends "layout.html" %}
+{% block title %}Sign In{% endblock %}
+{% block body %}
+  <h2>Sign In</h2>
+  {% if error %}<div class=error><strong>Error:</strong> {{ error }}</div>{% endif %}
+  <form action="{{ url_for('add_message') }}" method=post>
+  <p><input type=text name=text size=60><!--
+  --><input type=submit value="Share">
+  <p><h3>Where did it happen?</h3><input type=text name=where size=50>
+  <p><input type="checkbox" name="publicFlag" value="publicFlag">Don't post it in public<br>
+  <p><input type="checkbox" name="intentionalFlag" value="intentionalFlag">Did he/she mean to offend you?<br>
+  <p><input type="checkbox" name="reportToOffenderFlag" value="reportToOffenderFlag">Do you want to let him/her know?<br>
+</form>
+{% endblock %}
+
